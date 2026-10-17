@@ -1,0 +1,19 @@
+name: Build InkLayer DMG
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build app and DMG
+        run: |
+          chmod +x build_app.sh
+          ./build_app.sh
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: InkLayer-dmg
+          path: build/InkLayer.dmg
