@@ -13,8 +13,7 @@ let package = Package(
                 "main.swift", "AppDelegate.swift", "AnnotationController.swift",
                 "CanvasView.swift", "Geometry.swift", "HotKeys.swift",
                 "Models.swift", "ToolbarPanel.swift"
-            ],
-            swiftSettings: [.swiftLanguageVersion(.v5)]
+            ]
         )
     ]
 )
